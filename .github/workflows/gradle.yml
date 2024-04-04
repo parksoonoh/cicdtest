@@ -46,7 +46,7 @@ jobs:
         file: ./Dockerfile
         platforms: windows/amd64
         push: true
-        tags: ${{ steps.docker_meta.outputs.tags }}
+        tags: latest
         labels: ${{ steps.docker_meta.outputs.labels }}
 
   dependency-submission:
