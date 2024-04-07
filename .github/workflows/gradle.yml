@@ -60,8 +60,8 @@ jobs:
     - name: Pull Docker image
       run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
 
-    - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }} .
+    - name: Run Docker container
+      run: docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
       
   dependency-submission:
 
