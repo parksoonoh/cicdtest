@@ -59,6 +59,7 @@ jobs:
 
         script: |
           CONTAINER_ID=$(docker ps -q --filter "ancestor=${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}")
+          echo "::set-output name=container_id::$CONTAINER_ID"
           docker stop $CONTAINER_ID
           docker rm $CONTAINER_ID
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
