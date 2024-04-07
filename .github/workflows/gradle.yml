@@ -58,6 +58,9 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
 
         script: |
+          CONTAINER_ID=$(docker ps -q --filter "ancestor=${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}")
+          docker stop $CONTAINER_ID
+          docker rm $CONTAINER_ID
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
       
