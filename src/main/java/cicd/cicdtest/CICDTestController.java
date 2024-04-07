@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CICDTestController {
     @GetMapping("/")
     public String homepage(){
-        return "This is second Home Page";
+        return "This is third Home Page";
     }
     @GetMapping("/hello")
     public String helloPage(){
@@ -17,5 +17,10 @@ public class CICDTestController {
     @GetMapping("/hashing_master")
     public String specialPage(){
         return "You are hashing master!";
+    }
+
+    @GetMapping("/hollys")
+    public String hollys(){
+        return "coffee";
     }
 }
