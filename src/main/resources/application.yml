@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: DB_url
-    username: DB_username
-    password: DB_password
+    url: jdbc:oracle:thin:@192.168.56.1:1521:orcl
+    username: cicdtest
+    password: cicdtest
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     hibernate:
