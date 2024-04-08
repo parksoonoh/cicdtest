@@ -23,6 +23,7 @@ dependencies {
 	implementation group: 'com.oracle.ojdbc', name: 'orai18n', version: '19.3.0.0'
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
 
+	implementation 'com.h2database:h2'
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
 
 	compileOnly 'org.projectlombok:lombok'
