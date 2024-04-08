@@ -36,7 +36,9 @@ jobs:
         spring.datasource.url: ${{ secrets.DB_URL }} 
         spring.datasource.username: ${{ secrets.DB_USERNAME }} 
         spring.datasource.password: ${{ secrets.DB_PASSWORD }} 
-        
+    - name: Run H2 Database
+      run: |
+        java -cp h2-1.4.200.jar org.h2.tools.Server -tcp -tcpAllowOthers
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
