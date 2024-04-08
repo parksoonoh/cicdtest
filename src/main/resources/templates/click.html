@@ -6,10 +6,14 @@
 </head>
 <body>
 <div>
-    <button th:onclick="location.href='/click'" type="button" style="width:200px; height:100px;">
+    <button th:onclick="location.href='/increase'" type="button" style="width:200px; height:100px;">
         button
     </button>
-    <p id="count" th:text="${count}">0</p>
+    <p id="count" th:text="${'My Money : ' + member.money}"></p>
+
+    <div th:each="oneMember : ${members}">
+        <p th:text="${oneMember.name + ' : ' + oneMember.money}"></p>
+    </div>
 </div>
 </body>
 </html>
