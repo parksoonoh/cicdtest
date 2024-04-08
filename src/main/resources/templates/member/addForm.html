@@ -20,7 +20,7 @@
         <input type="text" id="name" th:field="*{name}">
     </div>
     <button type="submit">회원 가입</button>
-    <button th:onclick="|location.href='/'|" type="button">취소</button>
+    <button th:onclick="|location.href='@{./}'|" type="button">취소</button>
 </form>
 </body>
 </html>

@@ -35,7 +35,7 @@ public class LoginController {
     public String loginPost(@ModelAttribute LoginForm form, HttpServletRequest request, Model model){
         String result = loginService.login(form, request, model);
         if (result.equals("Login Success")){
-            return "/click";
+            return "./click";
         }
         return "redirect:/";
     }

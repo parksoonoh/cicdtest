@@ -36,7 +36,7 @@ public class CICDTestService {
             model.addAttribute("member", findMember);
             List<Member> allMember = memberRepository.findAll();
             model.addAttribute("members", allMember);
-            return "/click";
+            return "./click";
         }
     }
 
