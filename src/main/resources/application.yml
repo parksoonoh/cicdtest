@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: DB_URL
-    username: DB_USERNAME
-    password: DB_PASSWORD
+    url: DB_url
+    username: DB_username
+    password: DB_password
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     hibernate:
