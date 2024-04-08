@@ -16,7 +16,7 @@ public class LoginController {
 
     @GetMapping("/signup")
     public String signUp(@ModelAttribute("member")Member member){
-        return "/member/addForm";
+        return "./member/addForm";
     }
 
     @PostMapping("/signup")
@@ -28,7 +28,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String loginGet(@ModelAttribute("loginForm")LoginForm form) {
-        return "/loginPage";
+        return "./loginPage";
     }
 
     @PostMapping("/login")
