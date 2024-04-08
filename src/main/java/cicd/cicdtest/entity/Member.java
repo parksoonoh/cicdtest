@@ -18,9 +18,16 @@ public class Member {
     private String password;
     private String name;
 
-    public Member(String id, String password, String name) {
+    private Integer money;
+
+    public Member(String id, String password, String name, Integer money) {
         this.id = id;
         this.password = password;
         this.name = name;
+        this.money = money;
+    }
+
+    public void addMoney(){
+        this.money++;
     }
 }
