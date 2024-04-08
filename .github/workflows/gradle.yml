@@ -61,7 +61,7 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           docker stop ${{ env.IMAGE_NAME }}
           docker rm ${{ env.IMAGE_NAME }}
-          docker run -d -p 8082:8080 --name ${{ env.IMAGE_NAME }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+          docker run -d -p 8082:8082 --name ${{ env.IMAGE_NAME }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
       
   dependency-submission:
 
