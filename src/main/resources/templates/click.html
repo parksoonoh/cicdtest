@@ -9,6 +9,9 @@
     <button th:onclick="location.href='./increase'" type="button" style="width:200px; height:100px;">
         button
     </button>
+    <button th:onclick="location.href='./'" type="button" style="width:200px; height:100px;">
+        logout
+    </button>
     <p id="count" th:text="${'My Money : ' + member.money}"></p>
 
     <div th:each="oneMember : ${members}">
