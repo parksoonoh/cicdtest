@@ -9,6 +9,7 @@ on:
 env:
   IMAGE_NAME: cicdtest
   TAG: latest
+  RESOURCE_PATH: ./src/main/resources/application.yml
 
 jobs:
   build:
@@ -30,6 +31,15 @@ jobs:
         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Set yml file 
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: ${{ env.RESOURCE_PATH }} 
+      env:
+        spring.datasource.url: ${{ secrets.DB_URL }} 
+        spring.datasource.username: ${{ secrets.DB_USERNAME }} 
+        spring.datasource.password: ${{ secrets.DB_PASSWORD }} 
 
     - name: Build with Gradle
       run: ./gradlew clean build
