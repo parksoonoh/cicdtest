@@ -9,7 +9,7 @@ on:
 env:
   IMAGE_NAME: cicdtest
   TAG: latest
-  RESOURCE_PATH: ./src/
+  RESOURCE_PATH: ./src/main/resources/application.yml
 
 jobs:
   build:
